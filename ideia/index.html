@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Primeira Página Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Nosso Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <div class="container mt-5 text-center">
+        <h1>Olá, Mundo!</h1>
+        <p id="mensagem">Está é nossa primeira página web.</p>
+
+        <p>Acompanhe-nos, em nosso progresso no mundo da tecnologia.</p>
+        <button id="botao" class="btn btn-primary">Clique aqui</button>
+    </div>
+
+    <Div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/RpnF3qZkCMA?si=kN8R1m0-n4SCGY6f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <!-- Footer -->
+    <footer class="bg-Danger text-white text-center py-3 mt-5">
+        <p><Strong>Alexia de Castro Xavier      |01| Amaral Wagner, 3°C</Strong></p>
+        <p><Strong>Enrico Macedo dos Santos     |13| Amaral Wagner, 3°C</Strong></p>
+        <p><Strong>Gabriel Norio Sakami         |16| Amaral Wagner, 3°C</Strong></p>
+        <p><Strong>Mariana Alcântara spinelli   |28| Amaral Wagner, 3°C</Strong></p>
+    </footer>
+
+
+   <!-- Animação de Estrelas -->
+   <div class="star-container"></div>
+
+   
+    <!-- JavaScript do Bootstrap e Script customizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       
+
+            // Animação de estrelas ao clicar no botão
+        document.getElementById('botao').onclick = function() {
+            const starContainer = document.querySelector('.star-container');
+            starContainer.classList.add('show-stars');
+            document.getElementById('mensagem').innerHTML = 'Você clicou no botão!';
+
+            // Remover as estrelas após 10 segundos
+            setTimeout(() => {
+                starContainer.classList.remove('show-stars');
+            }, 10000);
+        };
+    </script>
+</body>
+</html>

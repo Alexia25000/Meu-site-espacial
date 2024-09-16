@@ -1,0 +1,96 @@
+/* Background preto */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    margin-top: 50px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+p {
+    color: #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos personalizados para o footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para a animação de estrelas */
+.star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    display: none;
+}
+
+.show-stars {
+    display: block;
+}
+
+.star-container::before, .star-container::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: star-fall 2s linear infinite;
+}
+
+.star-container::before {
+    left: 25%;
+    animation-delay: 0.5s;
+}
+
+.star-container::after {
+    right: 25%;
+    animation-delay: 1s;
+}
+
+@keyframes star-fall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+
+
